@@ -1,3 +1,4 @@
+//luke grube
 var createObject, extendObject,
   sayHello, sayText, makeMammal,
   catPrototype, makeCat, garfieldCat;
