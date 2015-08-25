@@ -1,4 +1,5 @@
-  var createObject, extendObject,
+//luke grube  
+var createObject, extendObject,
         sayHello, sayText, makeMammal,
         catPrototype, makeCat, garfieldCat;
       // ** Utility function to set inheritance
