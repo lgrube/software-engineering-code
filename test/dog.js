@@ -1,6 +1,6 @@
 var createObject, extendObject,
   sayHello, sayText, makeMammal,
-  catPrototype, makeCat, garfieldCat;
+  dogPrototype, makeDog, kujoDog;
 // ** Utility function to set inheritance
 // Cross-browser method to inherit Object.create()
 // Newer js engines (v1.8.5+) support it natively
@@ -48,26 +48,26 @@ makeMammal = function ( arg_map ) {
   return mammal;
   };
 
-// ** use mammal constructor to create cat prototype
-catPrototype = makeMammal({
-  has_whiskers : true,
-  hello_text : 'meow'
+// ** use mammal constructor to create dog prototype
+dogPrototype = makeMammal({
+  has_pointy_ears : true,
+  hello_text : 'woof'
   });
 
-// ** cat constructor
-makeCat = function( arg_map ) {
-  var cat = Object.create( catPrototype );
-  extendObject( cat, arg_map );
-  return cat;
+// ** dog constructor
+makeDog = function( arg_map ) {
+  var dog = Object.create( dogPrototype );
+  extendObject( dog, arg_map );
+  return dog;
   };
 
-// ** cat instance
-garfieldCat = makeCat({
-  name : 'Garfield',
-  weight_lbs : 8.6
+// ** dog instance
+kujoDog = makeDog({
+  name : 'Kujo',
+  weight_lbs : 20.0
   });
 
-// ** cat instance method invocations
-garfieldCat.say_hello();
-garfieldCat.say_text('Purr...');
+// ** dog instance method invocations
+kujoDog.say_hello();
+kujoDog.say_text('woof...');
 
